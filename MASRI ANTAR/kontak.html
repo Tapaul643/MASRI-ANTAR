@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Antar Jemput Pariwisata di Lombok - Kontak</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .banner-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Adjust this value as needed */
+            display: block;
+            object-fit: cover;
+        }
+        .navbar {
+            position: relative;
+            background: linear-gradient(90deg, #071ac9, #444);
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #4CAF50;
+            color: white;
+            transform: scale(1.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(9, 5, 224, 0.2);
+        }
+        .navbar .icon {
+            display: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .map-container {
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .search-box {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+        }
+        .search-box input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .search-box button {
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 5px;
+        }
+        .search-box button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+            background-color: #25D366;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .whatsapp-link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .whatsapp-link:hover {
+            background-color: #20b357;
+            transform: scale(1.05);
+        }
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+        .contact-box {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                display: none;
+            }
+            .navbar a.icon {
+                display: block;
+                float: left;
+                padding: 14px 20px;
+                text-align: center;
+                background-color: #05206b;
+                cursor: pointer;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+            .navbar a.icon:hover {
+                transform: rotate(90deg);
+                background-color: #4CAF50;
+            }
+            .navbar.responsive a {
+                display: block;
+                text-align: left;
+            }
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Driver Antar Jemput Pariwisata di Lombok</h1>
+</header>
+
+<div class="navbar" id="navbar">
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+    </a>
+    <a href="index.html">Home</a>
+    <a href="layanan.html">Layanan</a>
+    <a href="kontak.html">Kontak</a>
+</div>
+
+<img src="d999cb23-441f-4b70-99a9-52b34204be2a-1602223742287-0b728f573ff36f46f5f620701f9de08a.webp" alt="Banner Image" class="banner-img">
+
+<div class="container">
+    <section id="contact" class="contact-box">
+        <h2>Kontak Kami</h2>
+        <p>Untuk informasi lebih lanjut dan reservasi, silakan hubungi kami:</p>
+        <div class="contact-info">
+            <ul>
+                <li class="whatsapp-link">
+                    <a href="https://wa.me/qr/G5M2N2C3PVBDL1" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp Logo">
+                        083129230866
+                    </a>
+                </li>
+                <li>Email: <a href="mailto:info@pariwisatalombok.com">info@pariwisatalombok.com</a></li>
+                <li>Alamat: Jalan Raya Kuta, Lombok Tengah, Nusa Tenggara Barat</li>
+            </ul>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari lokasi...">
+            <button type="button" onclick="searchLocation()">Cari</button>
+        </div>
+
+        <div class="map-container">
+            <iframe id="googleMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.0902865044484!2d116.27703521523812!3d-8.65290889378506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbf53ae1b83a5%3A0x3030bfbcaf7f96d8!2sJalan%20Raya%20Kuta%2C%20Lombok%20Tengah%2C%20Nusa%20Tenggara%20Barat!5e0!3m2!1sen!2sid!4v1602231081002!5m2!1sen!2sid" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2024 Driver Antar Jemput Pariwisata di Lombok. Semua Hak Dilindungi.
+</footer>
+
+<script>
+    function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "navbar";
+        }
+    }
+
+    function searchLocation() {
+        var input = document.getElementById('searchInput').value;
+        var location = encodeURIComponent(input);
+        var searchURL = 'https://www.google.com/maps/search/?api=1&query=' + location;
+        window.open(searchURL, '_blank');
+    }
+</script>
+
+</body>
+</html>
